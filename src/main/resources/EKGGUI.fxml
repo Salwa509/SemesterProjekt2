@@ -6,58 +6,69 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EKGGUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0"
+            prefWidth="690.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="EKGGUIController">
     <children>
-        <SplitPane dividerPositions="0.23357664233576642, 0.8467153284671532" layoutX="443.0" layoutY="100.0" orientation="VERTICAL" prefHeight="139.0" prefWidth="220.0">
+        <SplitPane dividerPositions="0.23357664233576642, 0.8467153284671532" layoutX="443.0" layoutY="100.0"
+                   orientation="VERTICAL" prefHeight="139.0" prefWidth="220.0">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="30.0" prefWidth="222.0">
                     <children>
-                        <Text fill="#070505" layoutX="15.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oplysninger om patient">
+                        <Text fill="#070505" layoutX="15.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Oplysninger om patient">
                             <font>
-                                <Font size="17.0" />
+                                <Font size="17.0"/>
                             </font>
                             <effect>
-                                <Blend />
+                                <Blend/>
                             </effect>
                         </Text>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="450.0" layoutY="100.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <AnchorPane layoutX="450.0" layoutY="100.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0"
+                            prefWidth="160.0">
                     <children>
-                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Navn: Hans Hansen" />
-                        <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder: 52" />
-                        <Text layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sygdomme: ingen" />
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Navn: Hans Hansen"/>
+                        <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder: 52"/>
+                        <Text layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Sygdomme: ingen"/>
                     </children>
                 </AnchorPane>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sidst tjekket d. 8. marts klokken 11:58">
                     <font>
-                        <Font size="11.0" />
+                        <Font size="11.0"/>
                     </font>
                 </Text>
             </items>
         </SplitPane>
 
-        <Polygon fill="#cdc7c7" layoutX="349.0" layoutY="272.0" points="-116.0, -214.5, 128.0, -214.5, 4.5, -355.5" stroke="BLACK" strokeType="INSIDE" />
-        <Text layoutX="275.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" DIAGNOMONIC" textAlignment="CENTER">
+        <Polygon fill="#cdc7c7" layoutX="349.0" layoutY="272.0" points="-116.0, -214.5, 128.0, -214.5, 4.5, -355.5"
+                 stroke="BLACK" strokeType="INSIDE"/>
+        <Text layoutX="275.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" DIAGNOMONIC"
+              textAlignment="CENTER">
             <font>
-                <Font size="21.0" />
+                <Font size="21.0"/>
             </font>
         </Text>
-        <Text layoutX="108.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indtast Patient ID" />
-        <Separator layoutX="72.0" layoutY="263.0" prefHeight="13.0" prefWidth="566.0" />
-        <Text fill="#726969" layoutX="300.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MÅLINGER" wrappingWidth="110.22704976797104">
+        <Text layoutX="108.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indtast Patient ID"/>
+        <Separator layoutX="72.0" layoutY="263.0" prefHeight="13.0" prefWidth="566.0"/>
+        <Text fill="#726969" layoutX="300.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MÅLINGER"
+              wrappingWidth="110.22704976797104">
             <font>
-                <Font size="21.0" />
+                <Font size="21.0"/>
             </font>
         </Text>
         <Text layoutX="17.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EKG">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </Text>
-        <Button fx:id="run" layoutX="22.0" layoutY="425.0" mnemonicParsing="false" onAction="#EKGMeasurements" prefHeight="36.0" prefWidth="79.0" text="Run" />
-        <TextField fx:id="patientID" layoutX="108.0" layoutY="150.0" promptText="Patient ID..." />
-        <Button fx:id="loader" layoutX="623.0" layoutY="425.0" mnemonicParsing="false" onAction="#next" text="Next" />
-        <Polyline fx:id="ekgLinje" layoutX="10.0" layoutY="400.0" strokeType="INSIDE" />
+        <Button fx:id="run" layoutX="22.0" layoutY="425.0" mnemonicParsing="false" onAction="#EKGMeasurements"
+                prefHeight="36.0" prefWidth="79.0" text="Run"/>
+        <TextField fx:id="patientID" layoutX="108.0" layoutY="150.0" promptText="Patient ID..."/>
+        <Button fx:id="loader" layoutX="623.0" layoutY="425.0" mnemonicParsing="false" onAction="#next" text="Next"/>
+        <Polyline fx:id="ekgLinje" layoutX="10.0" layoutY="325" strokeType="INSIDE"/>
     </children>
 </AnchorPane>

@@ -31,7 +31,6 @@ public class EKGDAOImpl implements EKGDAO {
                     "JOIN EKGMeasurements AS E ON p.PatientID = E.EKGPatientID WHERE CPR = ? ");
             preparedStatement.setString(1, cpr);
             ResultSet resultSet = preparedStatement.executeQuery();
-
             while (resultSet.next()) {
                 EKGDTO ekgDTO = new EKGDTO();
                 ekgDTO.setEKGPatientID(resultSet.getInt("EKGPatientID"));

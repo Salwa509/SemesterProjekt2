@@ -24,22 +24,20 @@ public class LoaderGUIController {
     public Polyline ekgLinje;
 
     public void loadData(ActionEvent actionEvent) {
-        Platform.runLater(()->{
-        EKGDAO EKGDAO = new EKGDAOImpl();
-        List<EKGDTO> EKGDTO = EKGDAO.load(Felt.getText());
-        LinkedList<Double> EKG = new LinkedList<>();
-        ekgLinje.getPoints().clear();
-        for (int i = 0; i <EKGDTO.size(); i++) {
-            EKG.add(Double.valueOf(i));
-            EKG.add(EKGDTO.get(i).getEKGMeasurements());
-
-        }
-        ekgLinje.getPoints().addAll(EKG);
+        Platform.runLater(() -> {
+            EKGDAO EKGDAO = new EKGDAOImpl();
+            List<EKGDTO> ekgDTO = EKGDAO.load(Felt.getText());
+            LinkedList<Double> EKG = new LinkedList<>();
+            ekgLinje.getPoints().clear();
+            for (int i = 0; i < ekgDTO.size(); i++) {
+                EKG.add(Double.valueOf(i));
+                EKG.add((1500 - ekgDTO.get(i).getEKGMeasurements()) / 10);
+            }
+            ekgLinje.getPoints().addAll(EKG);
         });
     }
 
     public void Back(ActionEvent actionEvent) throws IOException {
-
         Parent secondPaneLoader = FXMLLoader.load(getClass().getResource("/EKGGUI.fxml"));
         Scene secondScene = new Scene(secondPaneLoader);
         Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
